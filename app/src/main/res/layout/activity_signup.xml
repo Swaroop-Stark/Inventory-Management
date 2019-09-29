@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idLayout"
+    tools:context=".SignupActivity">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            />
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Sign up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/action_bar"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/companyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter company name"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/companyTinNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter company TIN number"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ownerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter owner's name"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter mobile number"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter E-mail ID"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/loginId"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter login ID"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter password"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="textPassword"
+                    android:maxLength="25"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/rePassoword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Re-enter password"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="textPassword"
+                    android:maxLength="25"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I agree the terms and conditions"/>
+        <Button
+            android:layout_marginBottom="16dp"
+            android:id="@+id/submit"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:background="@drawable/btnshape"
+            android:text="Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

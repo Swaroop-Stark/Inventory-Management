@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Inventory Management</string>
+    <string name="title_activity_selection">SelectionActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="titles">
+        <item>Android Devices</item>
+        <item>Properties</item>
+        <item>Multi user</item>
+        <item>Server</item>
+        <item>Bar-Code and QR-Code</item>
+        <item>Dashboard</item>
+        <item>Notification</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>This app is supportable in devices like android-mobiles, android-tablets, android-laptops. This approach is very helpful and economic as the user need not to purchase a costly laptop/desktop for managing their inventory.</item>
+        <item>This app has properties like adding employees, adding suppliers, adding categories, adding products, billing, company finance, viewing stocks, dashboard, etc. The user can navigate these functionality with ease.</item>
+        <item>This app provides multi-device property where the user can login the same account in different devices. This contains parallel data synchronization among the devices.</item>
+        <item>This app has a very secured server and all the data of the user\'s inventory are stored in the server. This provides a very great data integrity.</item>
+        <item>This app has a scanner which can scan bar codes and QR codes. This feature is helpful in reducing the user\'s effort while manually typing products.</item>
+        <item>This app has a dashboard which provides a graphical view of monthly product flow. This feature helps the user to better understand about flow.</item>
+        <item>This app has a notification option which helps user to get notified about the products which are out of stock and the products which is going to be expired.</item>
+    </string-array>
+</resources>

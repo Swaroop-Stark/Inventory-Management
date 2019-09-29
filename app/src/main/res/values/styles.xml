@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/pink</item>
+    </style>
+    <style name="Switch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#8BC34A</item>
+        <item name="colorSwitchThumbNormal">#1c000000</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+</resources>

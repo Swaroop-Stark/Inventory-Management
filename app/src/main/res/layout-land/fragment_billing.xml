@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BillingFragment">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            />
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Billing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/productNo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/action_bar"
+        android:inputType="number"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:hint="Enter product code"
+        android:background="@drawable/edittext_bg_shape2"
+        android:layout_width="420dp"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/action_bar"
+        android:paddingRight="10dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshape"
+        android:drawableRight="@drawable/ic_photo_camera_black_24dp"
+        android:text="Scan"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/productNo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/addProBtn"
+        android:paddingRight="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/action_bar"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshape"
+        android:drawableRight="@drawable/ic_add_black_24dp"
+        android:text="Add"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/productNo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <RelativeLayout
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:elevation="8dp"
+        android:background="@color/pink"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/look"
+        android:layout_below="@+id/productNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#FFF"
+            android:id="@+id/productName"
+            android:text="Product name"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#FFF"
+            android:id="@+id/quantity"
+            android:text="Qty"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/mrp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#FFF"
+            android:id="@+id/mrp"
+            android:text="price"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ListView
+        android:layout_above="@+id/bottomLayout"
+        android:id="@+id/list"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/look"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:background="#FFF"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:elevation="8dp"
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="410dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Total : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/total"
+                android:textStyle="bold"
+                android:textSize="35dp"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/doneBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="8dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btnshape"
+            android:text="Done"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</RelativeLayout>

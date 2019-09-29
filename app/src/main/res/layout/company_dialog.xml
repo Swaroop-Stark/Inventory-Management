@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_curve"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/action_bar_curve"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/action_bar"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ownerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter owner's name"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter mobile number"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter E-mail ID"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Enter password"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:inputType="textPassword"
+                    android:maxLength="25"
+                    android:textColor="#000"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:text="PIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.goodiebag.pinview.Pinview
+                android:id="@+id/pinview"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pinWidth="40dp"
+                app:pinHeight="40dp"
+                app:pinLength="4"
+                app:forceKeyboard="false"
+                app:hint="0"
+                app:inputType="number"
+                app:password="true"/>
+            <Button
+                android:layout_marginBottom="16dp"
+                android:id="@+id/saveBtn"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:background="@drawable/btnshape"
+                android:text="Save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

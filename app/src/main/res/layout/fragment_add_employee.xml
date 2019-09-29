@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddEmployeeFragment">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            />
+        <TextView
+            android:layout_marginLeft="18dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Add Employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/addingLayout"
+        android:background="@color/pink"
+        android:layout_below="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/empName"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:inputType="text"
+                    android:hint="Enter employee name"
+                    android:background="@drawable/edittext_bg_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" />
+                <EditText
+                    android:id="@+id/empDesignation"
+                    android:layout_below="@id/empName"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:inputType="text"
+                    android:hint="Enter designation"
+                    android:background="@drawable/edittext_bg_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" />
+                <EditText
+                    android:layout_below="@id/empDesignation"
+                    android:id="@+id/empPhoneNumber"
+                    android:inputType="phone"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:maxLength="10"
+                    android:hint="Enter employee phone no."
+                    android:background="@drawable/edittext_bg_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" />
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_below="@id/empPhoneNumber"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Enter a new PIN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <com.goodiebag.pinview.Pinview
+                    android:id="@+id/pinview"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:pinWidth="40dp"
+                    app:pinHeight="40dp"
+                    app:pinLength="4"
+                    app:forceKeyboard="false"
+                    app:hint="0"
+                    app:inputType="number"
+                    app:password="true"/>
+                <Switch
+                    android:id="@+id/switchAccess"
+                    android:trackTint="#FFF"
+                    android:theme="@style/Switch"
+                    android:textColor="#FFF"
+                    android:layout_marginTop="20dp"
+                    android:text="Access "
+                    android:layout_below="@+id/pinview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_below="@+id/pinview"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/save"
+                    android:textColor="#FFF"
+                    android:background="@drawable/btnshape2"
+                    android:text="save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/addingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:elevation="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@color/pink"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/look"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:id="@+id/productName"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:text="Employee name"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/location"
+                android:text="Designation"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/noImg"
+            android:src="@mipmap/nodata"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ListView
+            android:id="@+id/list"
+            android:layout_below="@+id/look"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:backgroundTint="@color/pink"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

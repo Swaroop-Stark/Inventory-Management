@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_curve"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/action_bar_curve"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/billNo"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/action_bar"
+        android:inputType="number"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:hint="Enter bill no."
+        android:background="@drawable/edittext_bg_shape2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <AutoCompleteTextView
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/billNo"
+        android:id="@+id/supplier"
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:hint="Enter supplier's name"
+        android:background="@drawable/edittext_bg_shape2"
+        android:layout_width="200dp"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/drop2"
+        android:layout_marginRight="8dp"
+        android:paddingRight="10dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshape"
+        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+        android:text="Select"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/billNo"
+        android:layout_toRightOf="@+id/supplier"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/supplier"
+        android:text="Done"
+        android:layout_marginBottom="16dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btnshape"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</RelativeLayout>

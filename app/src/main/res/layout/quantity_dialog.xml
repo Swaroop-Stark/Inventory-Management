@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_curve"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/action_bar_curve"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/action_bar"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:id="@+id/textLay"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter quantity"
+            android:maxLength="3"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:inputType="number"
+            android:textColor="#000"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <Spinner
+        android:id="@+id/unit"
+        android:layout_marginRight="8dp"
+        android:popupBackground="@drawable/list_shape"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/action_bar"
+        android:layout_toRightOf="@+id/textLay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+    <Button
+        android:id="@+id/okBtn"
+        android:textColor="#FFFFFF"
+        android:text="Done"
+        android:layout_below="@+id/textLay"
+        android:background="@drawable/btnshape"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</RelativeLayout>

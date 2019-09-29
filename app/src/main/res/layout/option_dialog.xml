@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_gravity="center"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textOfList"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="text"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/editBtn"
+        android:layout_toLeftOf="@+id/space"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        android:background="@drawable/btnshape5"
+        app:srcCompat="@drawable/ic_edit_black_24dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="60dp"
+        android:layout_height="100dp" />
+    <ImageView
+        android:id="@+id/deleteBtn"
+        android:layout_toRightOf="@+id/space"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        android:background="@drawable/btnshape5"
+        app:srcCompat="@drawable/ic_delete_black_24dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/space"
+        android:textColor="@color/pink"
+        android:text="Cancel"
+        android:background="@drawable/btnshape6"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

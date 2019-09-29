@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsFragment">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:background="#FFF"
+        android:elevation="8dp"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:background="@drawable/btnshape"
+            android:id="@+id/image"
+            android:layout_marginLeft="16dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/ic_store_mall_directory_black_24dp"
+            />
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="Company name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/dots"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/notificationBell"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_notifications_active_black_24dp"
+            android:layout_toLeftOf="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="1"
+            android:id="@+id/badge"
+            android:gravity="center"
+            android:textSize="8dp"
+            android:background="@drawable/badge_shape"
+            android:layout_marginRight="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/dots"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/notiLay"
+        android:layout_below="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+        <TextView
+            android:id="@+id/productName"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:text="Notification"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/notifications"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/location"
+            android:textSize="12dp"
+            android:text="Get notifications."
+            android:layout_below="@id/productName"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_below="@id/notiLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

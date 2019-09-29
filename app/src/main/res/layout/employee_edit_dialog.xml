@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_curve"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:background="@drawable/action_bar_curve"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/name"
+        android:text="Name"
+        android:layout_marginTop="8dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:layout_below="@id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/empDesignation"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:inputType="text"
+        android:hint="Enter designation"
+        android:background="@drawable/edittext_bg_shape2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <EditText
+        android:layout_below="@id/empDesignation"
+        android:id="@+id/empPhoneNumber"
+        android:inputType="phone"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:hint="Enter employee phone no."
+        android:background="@drawable/edittext_bg_shape2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/txt"
+        android:layout_below="@id/empPhoneNumber"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:text="Enter a new PIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinview"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pinWidth="40dp"
+        app:pinHeight="40dp"
+        app:pinLength="4"
+        app:forceKeyboard="false"
+        app:hint="0"
+        app:inputType="number"
+        app:password="true"/>
+    <Switch
+        android:id="@+id/switchAccess"
+        android:thumbTint="@color/colorPrimaryDark"
+        android:trackTint="#000"
+        android:textColor="#000"
+        android:layout_marginTop="20dp"
+        android:text="Access "
+        android:layout_below="@+id/pinview"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@+id/pinview"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/save"
+        android:textColor="#FFF"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btnshape"
+        android:text="save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

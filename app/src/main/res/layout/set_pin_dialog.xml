@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_curve"
+    android:layout_height="150dp">
+    <TextView
+        android:textColor="#000000"
+        android:background="@drawable/action_bar_curve"
+        android:id="@+id/txt"
+        android:paddingTop="8dp"
+        android:elevation="8dp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="Setup a new PIN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinview"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pinWidth="40dp"
+        app:pinHeight="40dp"
+        app:pinLength="4"
+        app:forceKeyboard="true"
+        app:hint="0"
+        app:inputType="number"
+        app:password="true"/>
+</RelativeLayout>
